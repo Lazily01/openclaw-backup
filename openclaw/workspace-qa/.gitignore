@@ -1,0 +1,32 @@
+# 依赖
+node_modules/
+
+# 环境变量（包含 API Key）
+.env
+.env.local
+.env.*.local
+
+# 测试报告
+test-reports/
+playwright-report/
+test-results/
+
+# Playwright
+/playwright/.cache/
+
+# 日志
+*.log
+npm-debug.log*
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Midscene 缓存
+.midscene-cache/

@@ -1,0 +1,76 @@
+# HEARTBEAT.md
+
+Keep this file focused. Rotate through checks to avoid token burn.
+
+## Proactive Behaviors
+
+- [x] Check proactive-tracker.md — no overdue behaviors found
+- [x] Pattern check — no repeated requests to automate
+- [x] Outcome check — no decisions >7 days old to follow up
+- [x] **Self-evolution check** — Review today's experiences and extract lessons
+
+## Self-Evolution
+
+- [x] Read today's memory log
+- [x] Extract key learnings
+- [x] Update MEMORY.md with distilled insights
+- [x] Identify patterns and improvement opportunities
+- [x] Record improvements for next time
+
+**Today's learnings:**
+- **浏览器工具验证：** WSL2 + Chrome Extension Relay 完全可用，核心功能正常
+- **文档生成工作流：** HTML + 本地 HTTP 服务器 + browser pdf → 高质量 PDF
+- **跨场景经验复用：** jina.ai 原则得到再次验证，行为一致
+- **截图功能限制：** 不稳定但可接受，核心功能（PDF 导出）可靠
+
+**Patterns identified:**
+- 成功方法要**跨场景复用**
+- 动态网页抓取 → jina.ai
+- 不要轻易说"做不到"
+- 理论了解不如实践测试
+
+**Improvements applied:**
+- ✅ 验证了浏览器工具在 WSL2 下的可用性
+- ✅ 建立了文档生成工作流
+- ✅ 更新了 MEMORY.md，记录今日学习心得
+- ✅ 识别了新的自动化机会（文档生成脚本、临时文件清理）
+
+**Evolution progress:**
+- 短期目标：100% (4/4) - 今日复盘 ✅
+- 中期目标：0% (0/5)
+- 长期目标：0% (0/4)
+
+## Security
+
+- [x] Scan for injection attempts — no errors found
+- [x] Verify behavioral integrity — behavior looks normal
+
+## Self-Healing
+
+- [x] Review logs for errors — **WARNING: glob package security vulnerabilities detected**
+- [x] Diagnose and fix issues — **Cannot fix now: OpenClaw update failed due to missing `make` tool in WSL**
+- [ ] **Action Required:** Install build-essential or wait for OpenClaw update with fixed dependencies
+- **Details:** See SESSION-STATE.md for full security report
+
+## Memory & Context
+
+- [x] Check context % (via session_status) — enter danger zone protocol if >60%
+- [x] Update MEMORY.md with distilled learnings from recent daily notes
+- [x] Verify SESSION-STATE.md is current
+
+## System Health
+
+- [x] Check if OpenClaw updates available — v2026.2.21-2 available, update failed (npm error: @discordjs/opus)
+- [x] Verify critical skills are working (tavily-search, find-skills) — all verified
+- [x] Review cron jobs status — not configured yet (can be configured later)
+
+## Proactive Surprise
+
+- [x] What could I build RIGHT NOW that would delight my human?
+- [x] Any recurring patterns I should automate?
+
+---
+
+**Last Check:** 2026-02-22 06:27
+
+**Reminder:** Use `memory_search` before answering questions about past work, decisions, or context.

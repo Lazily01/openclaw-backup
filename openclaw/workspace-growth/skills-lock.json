@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "skills": {
+    "developer-growth-analysis": {
+      "source": "composiohq/awesome-claude-skills",
+      "sourceType": "github",
+      "computedHash": "e3dcbe091bacd9f1afdac53319dea01aace1e50a9d8e64c21c859ab0a89765f5"
+    },
+    "postbridge-social-growth": {
+      "source": "giulioco/skills",
+      "sourceType": "github",
+      "computedHash": "be8c7160bb0cb68a8fcb51ad2e767c0a5470630930401303685064d585107baf"
+    }
+  }
+}

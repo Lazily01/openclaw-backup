@@ -1,0 +1,19 @@
+{
+  "name": "workspace-qa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:quick": "node scripts/quick-test.js",
+    "test:web": "playwright test tests/web/",
+    "report": "playwright show-report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@midscene/web": "^1.4.7",
+    "playwright": "^1.58.2"
+  }
+}

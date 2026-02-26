@@ -1,0 +1,70 @@
+# ===== 敏感信息 - 绝对不提交 =====
+
+# 凭证目录
+credentials/
+
+# 密钥文件
+*.key
+*.pem
+*.p12
+*.pfx
+id_rsa*
+id_ed25519*
+*.pub
+
+# API Keys 和 Tokens
+.env
+.env.*
+*.env
+
+# 配置文件（包含 token）
+openclaw.json
+openclaw.json.*
+*.json.bak
+*.json.bak.*
+
+# 会话文件（包含对话内容，可能有敏感信息）
+agents/*/sessions/*.jsonl
+agents/*/sessions/*.jsonl.*
+sessions/
+*.jsonl
+
+# Auth 配置
+auth-profiles.json
+auth.json
+auth/*.json
+
+# ===== 日志和临时文件 =====
+
+logs/
+*.log
+tmp/
+temp/
+*.tmp
+*.swp
+*.swo
+*~
+
+# ===== 缓存和依赖 =====
+
+cache/
+*.cache
+node_modules/
+
+# ===== 数据库文件 =====
+
+*.sqlite
+*.db
+
+# ===== 备份文件本身 =====
+
+*.tar.gz
+*.zip
+
+# ===== 其他敏感文件 =====
+
+device-auth.json
+device.json
+paired.json
+pending.json
+exec-approvals.json

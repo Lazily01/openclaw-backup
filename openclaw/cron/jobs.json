@@ -1,0 +1,123 @@
+{
+  "version": 1,
+  "jobs": [
+    {
+      "id": "[REDACTED_KEY]",
+      "agentId": "main",
+      "name": "daily-heartbeat",
+      "enabled": true,
+      "createdAtMs": 1771272907143,
+      "updatedAtMs": 1772120722485,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 9 * * *",
+        "tz": "Asia/Shanghai"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "AUTONOMOUS HEARTBEAT: 执行每日检查。\n\n任务清单：\n1. 读取 HEARTBEAT.md\n2. 检查 proactive-tracker.md - 是否有过期的行为？\n3. 模式检查 - 有重复的请求需要自动化吗？\n4. 结果检查 - 有超过 7 天的决策需要跟进吗？\n5. 检查上下文 %（如果 >60%，执行危险区协议）\n6. 更新 MEMORY.md，提取最近的日常记录中的学习内容\n7. 验证 SESSION-STATE.md 是最新的\n8. 主动惊喜：我现在能构建什么让我的用户感到惊喜？\n9. 识别重复模式并提议自动化\n\n报告格式：\n- 检查完成的项目\n- 发现的问题\n- 需要跟进的事项\n- 主动发现的改进机会"
+      },
+      "delivery": {
+        "mode": "announce"
+      },
+      "state": {
+        "nextRunAtMs": 1772154000000,
+        "lastRunAtMs": 1772120619545,
+        "lastStatus": "ok",
+        "lastDurationMs": 102940,
+        "consecutiveErrors": 0,
+        "lastRunStatus": "ok",
+        "lastDelivered": true,
+        "lastDeliveryStatus": "delivered"
+      }
+    },
+    {
+      "id": "[REDACTED_KEY]",
+      "agentId": "main",
+      "name": "3day-skills-review",
+      "enabled": true,
+      "notify": true,
+      "createdAtMs": 1771430281711,
+      "updatedAtMs": 1772120814992,
+      "schedule": {
+        "kind": "every",
+        "everyMs": 259200000,
+        "anchorMs": 1771430281711
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "快速检查是否有新技能或更新。如果发现值得推荐的技能，简洁说明为什么适合当前工作。"
+      },
+      "delivery": {
+        "mode": "announce"
+      },
+      "state": {
+        "nextRunAtMs": 1772379922485,
+        "lastRunAtMs": 1772120722485,
+        "lastStatus": "ok",
+        "lastDurationMs": 92507,
+        "consecutiveErrors": 0,
+        "lastRunStatus": "ok",
+        "lastDelivered": true,
+        "lastDeliveryStatus": "delivered"
+      }
+    },
+    {
+      "id": "[REDACTED_KEY]",
+      "agentId": "main",
+      "name": "7day-memory-cleanup",
+      "enabled": true,
+      "notify": false,
+      "createdAtMs": 1771430284729,
+      "updatedAtMs": 1772120882583,
+      "schedule": {
+        "kind": "every",
+        "everyMs": 604800000,
+        "anchorMs": 1771430284729
+      },
+      "sessionTarget": "main",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "systemEvent",
+        "text": "执行记忆整理任务：1) 归档30天和90天前的日志到历史档案；2) 从日志中提取重要知识到MEMORY.md；3) 清理过期的SESSION-STATE.md内容；4) 更新HEARTBEAT.md状态。"
+      },
+      "state": {
+        "nextRunAtMs": 1772725614992,
+        "lastRunAtMs": 1772120814992,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 67591,
+        "lastDeliveryStatus": "not-requested",
+        "consecutiveErrors": 0
+      }
+    },
+    {
+      "id": "[REDACTED_KEY]",
+      "name": "daily-disk-clean",
+      "enabled": true,
+      "createdAtMs": 1772120993972,
+      "updatedAtMs": 1772120993972,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 3 * * *"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "执行磁盘清理：python3 ~/.agents/skills/disk-cleaner/scripts/clean_disk.py --temp --cache --logs --recycle"
+      },
+      "delivery": {
+        "mode": "none",
+        "channel": "last"
+      },
+      "state": {
+        "nextRunAtMs": 1772132400000
+      }
+    }
+  ]
+}

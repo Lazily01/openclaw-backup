@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "skills": {
+    "code-simplifier": {
+      "source": "simonwong/agent-skills",
+      "sourceType": "github",
+      "computedHash": "788e5d6d1b1b887c75f43a3932889592baf28b193ba8e43895d9d0002a85ea24"
+    },
+    "frontend-design": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "computedHash": "063a0e6448123cd359ad0044cc46b0e490cc7964d45ef4bb9fd842bd2ffbca67"
+    },
+    "fullstack-developer": {
+      "source": "shubhamsaboo/awesome-llm-apps",
+      "sourceType": "github",
+      "computedHash": "d824d75875b289753740c12ba33c005a40f0d996f12d3424cabf1ef9ad4cd1a3"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "skills": {
+    "pm-agent": {
+      "source": "first-fluke/oh-my-ag",
+      "sourceType": "github",
+      "computedHash": "b98cdc92bf7492eb358c84fbd281311351f72d38adb5a478e6798c97b675bb4c"
+    }
+  }
+}
