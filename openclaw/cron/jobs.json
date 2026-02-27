@@ -7,7 +7,7 @@
       "name": "daily-heartbeat",
       "enabled": true,
       "createdAtMs": 1771272907143,
-      "updatedAtMs": 1772120722485,
+      "updatedAtMs": 1772158064246,
       "schedule": {
         "kind": "cron",
         "expr": "0 9 * * *",
@@ -23,10 +23,10 @@
         "mode": "announce"
       },
       "state": {
-        "nextRunAtMs": 1772154000000,
-        "lastRunAtMs": 1772120619545,
+        "nextRunAtMs": 1772240400000,
+        "lastRunAtMs": 1772157957294,
         "lastStatus": "ok",
-        "lastDurationMs": 102940,
+        "lastDurationMs": 106952,
         "consecutiveErrors": 0,
         "lastRunStatus": "ok",
         "lastDelivered": true,
@@ -100,7 +100,7 @@
       "name": "daily-disk-clean",
       "enabled": true,
       "createdAtMs": 1772120993972,
-      "updatedAtMs": 1772120993972,
+      "updatedAtMs": 1772132432493,
       "schedule": {
         "kind": "cron",
         "expr": "0 3 * * *"
@@ -116,7 +116,62 @@
         "channel": "last"
       },
       "state": {
-        "nextRunAtMs": 1772132400000
+        "nextRunAtMs": 1772218800000,
+        "lastRunAtMs": 1772132400012,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 32481,
+        "lastDelivered": false,
+        "lastDeliveryStatus": "not-delivered",
+        "consecutiveErrors": 0
+      }
+    },
+    {
+      "id": "[REDACTED_KEY]",
+      "name": "daily-github-backup",
+      "enabled": true,
+      "createdAtMs": 1772130285606,
+      "updatedAtMs": 1772130285606,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 0 * * *",
+        "tz": "Asia/Shanghai"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "执行 OpenClaw 每日备份到 GitHub。请运行脚本: ~/.openclaw/scripts/backup-to-github.sh"
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "telegram",
+        "to": "7690074075"
+      },
+      "state": {
+        "nextRunAtMs": 1772208000000,
+        "runningAtMs": 1772208000004
+      }
+    },
+    {
+      "id": "[REDACTED_KEY]",
+      "name": "agent-reach-config-reminder",
+      "enabled": true,
+      "deleteAfterRun": true,
+      "createdAtMs": 1772132623558,
+      "updatedAtMs": 1772132623558,
+      "schedule": {
+        "kind": "at",
+        "at": "2026-02-28T02:00:00.000Z"
+      },
+      "sessionTarget": "main",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "systemEvent",
+        "text": "提醒：配置 Agent-Reach 剩余功能。\\n\\n待配置项：\\n1. Twitter Cookie - 用 Cookie-Editor 浏览器插件导出\\n2. gh CLI - 需要 sudo 权限安装\\n3. Docker - 小红书 MCP 需要\\n4. 代理 - Reddit/B站服务器访问可能需要\\n\\n运行 agent-reach doctor 查看状态。"
+      },
+      "state": {
+        "nextRunAtMs": 1772244000000
       }
     }
   ]

@@ -1,0 +1,74 @@
+{
+  "test_time": "2026/2/27 20:47:24",
+  "total_tests": 11,
+  "passed": 11,
+  "failed": 0,
+  "tests": [
+    {
+      "name": "使用按钮添加任务",
+      "status": "✅ PASS",
+      "message": "任务内容: 测试任务1",
+      "screenshot": "/home/lazily/.openclaw/workspace-qa/test-reports/screenshots/add_todo_button.png"
+    },
+    {
+      "name": "使用回车键添加任务",
+      "status": "✅ PASS",
+      "message": "任务数量: 2",
+      "screenshot": "/home/lazily/.openclaw/workspace-qa/test-reports/screenshots/add_todo_enter.png"
+    },
+    {
+      "name": "阻止添加空任务",
+      "status": "✅ PASS",
+      "message": "添加按钮正确禁用，空任务未被添加",
+      "screenshot": "/home/lazily/.openclaw/workspace-qa/test-reports/screenshots/add_todo_empty.png"
+    },
+    {
+      "name": "删除指定任务",
+      "status": "✅ PASS",
+      "message": "剩余任务: 删除测试任务3, 删除测试任务1",
+      "screenshot": "/home/lazily/.openclaw/workspace-qa/test-reports/screenshots/delete_todo.png"
+    },
+    {
+      "name": "任务初始状态",
+      "status": "✅ PASS",
+      "message": "任务初始为未完成状态",
+      "screenshot": "/home/lazily/.openclaw/workspace-qa/test-reports/screenshots/toggle_initial.png"
+    },
+    {
+      "name": "标记任务完成",
+      "status": "✅ PASS",
+      "message": "任务已标记为完成",
+      "screenshot": "/home/lazily/.openclaw/workspace-qa/test-reports/screenshots/toggle_completed.png"
+    },
+    {
+      "name": "取消完成标记",
+      "status": "✅ PASS",
+      "message": "任务已取消完成标记",
+      "screenshot": "/home/lazily/.openclaw/workspace-qa/test-reports/screenshots/toggle_uncompleted.png"
+    },
+    {
+      "name": "持久化任务数量",
+      "status": "✅ PASS",
+      "message": "任务数量: 3",
+      "screenshot": "/home/lazily/.openclaw/workspace-qa/test-reports/screenshots/persistence_count.png"
+    },
+    {
+      "name": "持久化任务内容",
+      "status": "✅ PASS",
+      "message": "任务内容: 持久化测试3, 持久化测试2, 持久化测试1",
+      "screenshot": "/home/lazily/.openclaw/workspace-qa/test-reports/screenshots/persistence_content.png"
+    },
+    {
+      "name": "持久化完成状态",
+      "status": "✅ PASS",
+      "message": "已完成任务: 持久化测试2",
+      "screenshot": "/home/lazily/.openclaw/workspace-qa/test-reports/screenshots/persistence_status.png"
+    },
+    {
+      "name": "页面显示持久化数据",
+      "status": "✅ PASS",
+      "message": "页面正确显示持久化数据",
+      "screenshot": "/home/lazily/.openclaw/workspace-qa/test-reports/screenshots/persistence_display.png"
+    }
+  ]
+}

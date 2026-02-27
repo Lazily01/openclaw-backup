@@ -46,6 +46,9 @@ Keep this file focused. Rotate through checks to avoid token burn.
   - QA Agent: webapp-testing, e2e-testing-patterns
   - Growth Agent: postbridge-social-growth, developer-growth-analysis
 - **安全风险意识：** 部分技能标记为 High Risk，需要检查内容
+- **GitHub 自动备份：** 创建每日 0 点备份任务，自动排除敏感信息
+- **Agent-Reach 安装：** 5/12 渠道可用（搜索、读网页、RSS）
+- **主动清理意识：** 用户期望我主动清理无用文件/仓库，不该问
 
 **Today's learnings (2026-02-26):**
 - **Heartbeat 缺陷：** 发现问题后不会自动验证是否解决，导致过时信息堆积
