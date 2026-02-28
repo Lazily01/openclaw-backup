@@ -12,6 +12,10 @@
     "proactive-agent": {
       "version": "3.1.0",
       "installedAt": 1771178799936
+    },
+    "chart-image": {
+      "version": "2.5.1",
+      "installedAt": 1772217909325
     }
   }
 }

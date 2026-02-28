@@ -38,6 +38,20 @@ Keep this file focused. Rotate through checks to avoid token burn.
 
 ## Self-Evolution
 
+**Today's learnings (2026-02-28):**
+- **PAI (Personal AI Infrastructure) 研究：** 学习了 danielmiessler 的开源项目
+- **TELOS 系统理解：** 10 个文件定义"你是谁"（MISSION/GOALS/PROJECTS/BELIEFS/MODELS/STRATEGIES/NARRATIVES/LEARNED/CHALLENGES/IDEAS）
+- **对比分析：** 我们的架构 vs PAI 的 TELOS 系统
+  - 已有：MEMORY.md, memory/YYYY-MM-DD.md, SESSION-STATE.md, HEARTBEAT.md, USER.md, AGENTS.md
+  - 缺失：values.md, goals.md, skills.md, interests.md 等价值观/目标追踪文件
+- **借鉴机会：** 可以补充 TELOS 文件完善个人 AI 基础设施
+- **OpenClaw 版本：** 更新到 v2026.2.26
+- **AI Hedge Fund 学习：** 18 个 AI Agent 模拟投资大师的协作系统
+  - 12 个投资大师风格 Agent（Buffett, Munger, Ackman, Wood, Burry 等）
+  - 6 个功能 Agent（Valuation, Sentiment, Fundamentals, Technicals, Risk Manager, Portfolio Manager）
+  - 启发：多 Agent 协作模式、角色扮演、决策汇聚
+- **数字员工 Skills 盘点：** 确认 4 个 Agent 共 8 个技能正常运行
+
 **Today's learnings (2026-02-27):**
 - **模型权限问题：** 崩溃原因是调用 `zai/glm-5` 时模型未在允许列表，用户用 `fix` 命令修复
 - **数字员工技能化：** 给 4 个 agent 安装了 8 个专业技能
@@ -119,7 +133,7 @@ Keep this file focused. Rotate through checks to avoid token burn.
 
 ## System Health
 
-- [x] Check OpenClaw version — v2026.2.25 (latest, updated)
+- [x] Check OpenClaw version — v2026.2.26 (latest, updated)
 - [x] Verify critical skills are working (tavily-search, find-skills) — all verified
 - [x] Review cron jobs status — heartbeat cron active
 - [x] Telegram channel status — stable, no issues
@@ -131,6 +145,6 @@ Keep this file focused. Rotate through checks to avoid token burn.
 
 ---
 
-**Last Check:** 2026-02-27 02:03
+**Last Check:** 2026-02-28 19:14
 
 **Reminder:** Use `memory_search` before answering questions about past work, decisions, or context.

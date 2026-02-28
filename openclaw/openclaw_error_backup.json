@@ -1,0 +1,128 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.2.25",
+    "lastTouchedAt": "2026-02-27T02:05:50.513Z"
+  },
+  "env": {
+    "GITHUB_TOKEN": "[REDACTED_TOKEN]",
+    "GITHUB_USER": "Lazily01"
+  },
+  "wizard": {
+    "lastRunAt": "2026-02-27T02:05:50.504Z",
+    "lastRunVersion": "2026.2.25",
+    "lastRunCommand": "doctor",
+    "lastRunMode": "local"
+  },
+  "models": {
+    "providers": {
+      "zai": {
+        "baseUrl": "https://open.bigmodel.cn/api/paas/v4",
+        "models": ["glm-5", "glm-4v-flash"]
+      }
+    }
+  },
+  "auth": {
+    "profiles": {
+      "zai:default": {
+        "provider": "zai",
+        "mode": "api_key"
+      }
+    }
+  },
+  "acp": {
+    "enabled": true,
+    "dispatch": { "enabled": true },
+    "backend": "acpx",
+    "defaultAgent": "claude",
+    "allowedAgents": ["claude"],
+    "maxConcurrentSessions": 4,
+    "runtime": {
+      "ttlMinutes": 60
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "zai/glm-5"
+      },
+      "imageModel": {
+        "primary": "zai/glm-4v-flash"
+      },
+      "models": {
+        "zai/glm-5": {
+          "alias": "GLM"
+        },
+        "zai/glm-4v-flash": {
+          "alias": "GLM-Vision"
+        }
+      },
+      "workspace": "/home/lazily/.openclaw/workspace",
+      "compaction": {
+        "mode": "safeguard"
+      },
+      "maxConcurrent": 4,
+      "subagents": {
+        "maxConcurrent": 8,
+        "maxSpawnDepth": 2
+      }
+    },
+    "list": [
+      {
+        "id": "main",
+        "default": true,
+        "subagents": {
+          "allowAgents": ["pm-agent", "dev-agent", "qa-agent", "growth-agent"]
+        }
+      },
+      {
+        "id": "pm-agent",
+        "name": "PM Agent",
+        "workspace": "/home/lazily/.openclaw/workspace-pm",
+        "agentDir": "/home/lazily/.openclaw/agents/pm-agent/agent",
+        "model": "zai/glm-5",
+        "subagents": {
+          "allowAgents": ["dev-agent"]
+        }
+      },
+      {
+        "id": "dev-agent",
+        "name": "Dev Agent",
+        "workspace": "/home/lazily/.openclaw/workspace-dev",
+        "agentDir": "/home/lazily/.openclaw/agents/dev-agent/agent",
+        "model": "zai/glm-5",
+        "subagents": {
+          "allowAgents": ["qa-agent"]
+        }
+      },
+      {
+        "id": "qa-agent",
+        "name": "QA Agent",
+        "workspace": "/home/lazily/.openclaw/workspace-qa",
+        "agentDir": "/home/lazily/.openclaw/agents/qa-agent/agent",
+        "model": "zai/glm-5",
+        "subagents": {
+          "allowAgents": ["growth-agent", "dev-agent"]
+        }
+      },
+      {
+        "id": "growth-agent",
+        "name": "Growth Agent",
+        "workspace": "/home/lazily/.openclaw/workspace-growth",
+        "agentDir": "/home/lazily/.openclaw/agents/growth-agent/agent",
+        "model": "zai/glm-5"
+      }
+    ]
+  },
+  "channels": {
+    "telegram": {
+      "botToken": "[REDACTED_BOT_TOKEN]"
+    }
+  },
+  "plugins": {
+    "entries": {
+      "acpx": {
+        "enabled": true
+      }
+    }
+  }
+}

@@ -21,6 +21,10 @@
 - **重启策略:** 配置变化需要重启时，直接执行，不用询问
 - **数字员工工作流:** PM Agent 确认需求文档后，其他 Agent 全程自动化，不再询问用户
 - **项目完成:** 项目完成后自动上传 GitHub，不用询问
+- **可视化优先:** 数据汇报时优先使用图表（柱状图、饼图、折线图），不是纯文字
+- **图表技能必备:** 每个 Agent 都应该掌握图表生成能力
+- **图片识别:** 暂时不可用，等用户申请多模态模型后再配置
+- **Dev Agent 编码:** 使用 ACP + Claude Code（火山引擎 Coding Plan）
 
 ### 技术栈
 - 文件路径：/mnt/c/（Windows 文件访问）
@@ -97,7 +101,10 @@
 
 ## 重要数据（更新：豆包生图）
 
-### 火山引擎（豆包生图）
+### 火山引擎（豆包生图 + Coding Plan）
+- **API Key:** `[REDACTED_KEY]`
+- **Coding Plan API Key:** `[REDACTED_KEY]`
+- **Claude Code Base URL:** `https://ark.cn-beijing.volces.com/api/coding`
 - **API Key:** [REDACTED_KEY]
 - **端点:** https://ark.cn-beijing.volces.com/api/v3/images/generations
 - **模型:** doubao-seedream-4-5-251128 (Seedream 4.5)
@@ -1118,3 +1125,39 @@ curl -X POST 'https://ark.cn-beijing.volces.com/api/v3/images/generations' \
 *记录位置：** MEMORY.md（长期记忆）
 *记录内容：** 浏览器工具验证、文档生成工作流、跨场景经验复用、自动化机会
 *下次会话时：** 将自动读取，确保持续学习
+
+---
+
+## 数字员工优化 (2026-02-28)
+
+### 1️⃣ Claude Code 自测
+编码时同时生成单元测试，减少 Bug 往返次数
+
+### 2️⃣ 进度通知
+每个阶段通知用户：
+- 💻 开始编码
+- ✅ 编码完成
+- 🧪 开始测试
+- ⚠️ 发现 Bug
+- ✅ 测试通过
+- 🚀 已上传 GitHub
+
+### 3️⃣ 成本控制
+| 任务类型 | 模型 | 成本 |
+|----------|------|------|
+| 简单功能 | zai/glm-5 | 💰 低 |
+| 复杂功能 | Claude Code | 💰💰💰 高 |
+| Bug 修复 | 优先 zai/glm-5 | 💰 低 |
+
+### 6️⃣ 统一目录结构
+```
+项目/
+├── src/
+├── docs/
+│   ├── pm/      # PM 产出
+│   ├── qa/      # QA 产出
+│   ├── growth/  # Growth 产出
+│   └── dev/     # Dev 产出
+└── README.md
+```
+
