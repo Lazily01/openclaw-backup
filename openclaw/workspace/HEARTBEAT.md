@@ -38,6 +38,32 @@ Keep this file focused. Rotate through checks to avoid token burn.
 
 ## Self-Evolution
 
+**Today's learnings (2026-03-01):**
+- **Twitter 技能配置：** bird CLI + Chrome Extension Relay
+  - bird CLI 有技术限制：node 网络库不支持 HTTP 代理
+  - WSL → Windows 代理：需用 `172.29.112.1:端口`（不是 127.0.0.1）
+  - Clash 需开启 "Allow LAN" 才能让 WSL 访问
+  - Chrome Extension Relay 更稳定：继承登录状态，无需配置代理
+- **搜索工具对比：** Exa（agent-reach）全面强于 Tavily
+  - 热点新闻：Exa 抓到美以空袭伊朗（今天最热），Tavily 给的是旧闻
+  - 技术文档：Exa 返回完整长文+代码，Tavily 只有摘要
+  - 结论：Exa 全场景更强，删除 Tavily（节省 32K）
+- **技能精简：** 删除重复/无用技能
+  - chart-image（76M）— 依赖太重，你用豆包生图
+  - tavily-search（32K）— 被 Exa 替代
+  - ai-image-generation（12K）— 需要 inference.sh 登录，你有豆包
+  - 精简后：1.3M → 420K（节省 65%）
+- **豆包生图技能化：** 封装成 SKILL.md，以后主动调用
+  - 触发场景：配图、插图、概念图、产品图
+  - 4K 无水印，直接可用
+- **API Token 混淆：** 学会用正确 token 查 API
+  - 智谱 API：auth-profiles.json 里的新 token
+  - 火山引擎：MEMORY.md 里的 key（豆包生图、Coding Plan）
+- **Fallback 配置：** GLM-5 → GLM-4.7
+  - 下午高峰期 GLM-5 不稳定，network_error
+  - 配置 fallback 后自动切换
+- **今日重大新闻：** 美以空袭伊朗、哈梅内伊"殉难"、霍尔木兹海峡封锁、油价暴涨 15-20%
+
 **Today's learnings (2026-02-28):**
 - **PAI (Personal AI Infrastructure) 研究：** 学习了 danielmiessler 的开源项目
 - **TELOS 系统理解：** 10 个文件定义"你是谁"（MISSION/GOALS/PROJECTS/BELIEFS/MODELS/STRATEGIES/NARRATIVES/LEARNED/CHALLENGES/IDEAS）
@@ -145,6 +171,37 @@ Keep this file focused. Rotate through checks to avoid token burn.
 
 ---
 
-**Last Check:** 2026-02-28 19:14
+**Last Check:** 2026-03-01 09:00
+
+---
+
+## 2026-03-01 Heartbeat Summary
+
+### ✅ 检查完成的项目
+1. ✅ Proactive Tracker - 无过期行为
+2. ✅ Recurring Patterns - 模式识别清晰
+3. ✅ Outcome Journal - 无超过 7 天的决策需跟进
+4. ✅ Context % - 19%（安全区）
+5. ✅ OpenClaw Version - v2026.2.26（最新）
+6. ✅ Gateway - 运行正常
+7. ✅ Telegram - OK
+8. ✅ Security - 0 critical · 1 warn · 1 info
+
+### ⚠️ 发现的问题
+1. **Daily Notes 缺失:** 2026-02-23 到 2026-02-25 不存在
+2. **Memory 状态异常:** status 显示 0 文件，但实际有 20+ 文件
+
+### 📋 需要跟进的事项
+- 创建 2026-02-28.md ✅ 已完成
+- 修复 Memory 向量索引
+- 实现 X 文章自动归档工作流
+- 创建一键项目初始化脚本
+
+### 💡 改进机会
+1. Daily Note 自动创建机制（在 heartbeat 中检查）
+2. Memory 向量索引健康检查
+3. 重复模式自动化进度追踪
+
+**详细报告:** memory/2026-03-01-heartbeat-report.md
 
 **Reminder:** Use `memory_search` before answering questions about past work, decisions, or context.

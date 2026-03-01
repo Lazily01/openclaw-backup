@@ -7,7 +7,7 @@
       "name": "daily-heartbeat",
       "enabled": true,
       "createdAtMs": 1771272907143,
-      "updatedAtMs": 1772247260530,
+      "updatedAtMs": 1772326982489,
       "schedule": {
         "kind": "cron",
         "expr": "0 9 * * *",
@@ -23,15 +23,14 @@
         "mode": "announce"
       },
       "state": {
-        "nextRunAtMs": 1772326800000,
-        "lastRunAtMs": 1772247227028,
-        "lastStatus": "error",
-        "lastDurationMs": 33502,
-        "consecutiveErrors": 1,
-        "lastRunStatus": "error",
+        "nextRunAtMs": 1772413200000,
+        "lastRunAtMs": 1772326800004,
+        "lastStatus": "ok",
+        "lastDurationMs": 182485,
+        "consecutiveErrors": 0,
+        "lastRunStatus": "ok",
         "lastDelivered": true,
-        "lastDeliveryStatus": "delivered",
-        "lastError": "Unhandled stop reason: network_error"
+        "lastDeliveryStatus": "delivered"
       }
     },
     {
@@ -41,7 +40,7 @@
       "enabled": true,
       "notify": true,
       "createdAtMs": 1771430281711,
-      "updatedAtMs": 1772120814992,
+      "updatedAtMs": 1772380013986,
       "schedule": {
         "kind": "every",
         "everyMs": 259200000,
@@ -57,10 +56,10 @@
         "mode": "announce"
       },
       "state": {
-        "nextRunAtMs": 1772379922485,
-        "lastRunAtMs": 1772120722485,
+        "nextRunAtMs": 1772639122491,
+        "lastRunAtMs": 1772379922491,
         "lastStatus": "ok",
-        "lastDurationMs": 92507,
+        "lastDurationMs": 91495,
         "consecutiveErrors": 0,
         "lastRunStatus": "ok",
         "lastDelivered": true,
@@ -101,7 +100,7 @@
       "name": "daily-disk-clean",
       "enabled": true,
       "createdAtMs": 1772120993972,
-      "updatedAtMs": 1772218821642,
+      "updatedAtMs": 1772305239899,
       "schedule": {
         "kind": "cron",
         "expr": "0 3 * * *"
@@ -117,11 +116,11 @@
         "channel": "last"
       },
       "state": {
-        "nextRunAtMs": 1772305200000,
-        "lastRunAtMs": 1772218800004,
+        "nextRunAtMs": 1772391600000,
+        "lastRunAtMs": 1772305200004,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 21638,
+        "lastDurationMs": 39895,
         "lastDelivered": false,
         "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0
@@ -132,7 +131,7 @@
       "name": "daily-github-backup",
       "enabled": true,
       "createdAtMs": 1772130285606,
-      "updatedAtMs": 1772208023841,
+      "updatedAtMs": 1772294441045,
       "schedule": {
         "kind": "cron",
         "expr": "0 0 * * *",
@@ -150,15 +149,15 @@
         "to": "7690074075"
       },
       "state": {
-        "nextRunAtMs": 1772294400000,
-        "lastRunAtMs": 1772208000005,
+        "nextRunAtMs": 1772380800000,
+        "lastRunAtMs": 1772294400004,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 23836,
+        "lastDurationMs": 41041,
         "lastDelivered": true,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "runningAtMs": 1772294400003
+        "runningAtMs": 1772380800002
       }
     }
   ]
